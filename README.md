@@ -49,11 +49,6 @@ Recommended (Automated) invocation:
 
 You should see console output steps (loading, preprocessing, training) and a final DataFrame with metrics for each model.
 
-**Quick Tricks**
-- **Use the truncated dataset**: edit `src/config.py` and set `data_path = "data/truncated_train_data.csv"` then re-run.
-- **Change test split or random seed**: edit `test_size` and `random_state` in `src/config.py` (these are fields on `AppConfig`).
-- **Add/remove models**: open `src/main.py` and modify the `pipeline.add_model(...)` lines. Models are wrapped with `SklearnModelAdapter`.
-
 **Project Structure (key files)**
 - `src/main.py`: orchestrates configuration, pipeline and model registration.
 - `src/pipeline.py`: data split, imbalance handling, scaling, training loop and evaluation.
