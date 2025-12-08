@@ -37,38 +37,14 @@ insurance_prediction/
 - **Python:**: 3.8+ recommended.
 - **Dependencies:**: listed in `requirements.txt`.
 
-**Quick Setup**
-- **Create venv:**: Create and activate a virtual environment.
-
-```bash
-python -m venv .venv
-source .venv/bin/activate
-```
-
-- **Install deps:**: Install requirements.
-
-```bash
-pip install -r requirements.txt
-```
-
-**Data**
-- **Default dataset path:**: `data/train_data.csv` (configured in `src/config.py` as `AppConfig.data_path`).
-- **Quick small dataset:**: `data/truncated_train_data.csv` is available for faster experimentation.
-- **Important column:**: The pipeline expects a target column named `is_claim`.
-
 If your dataset is in a different location, either update `data_path` in `src/config.py` or replace the file at `data/train_data.csv`.
 
 **Run Training & Evaluation**
 - The main entrypoint runs preprocessing, trains three models, evaluates them, and prints a summary.
 
-Recommended (module) invocation:
+Recommended (Automated) invocation:
 ```bash
-python -m src.main
-```
-
-Or run the script directly:
-```bash
-python src/main.py
+./run.sh
 ```
 
 You should see console output steps (loading, preprocessing, training) and a final DataFrame with metrics for each model.
